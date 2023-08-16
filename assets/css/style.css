@@ -1,0 +1,25 @@
+/* Header */
+header {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Game area */
+.game-area {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-area button {
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    margin: 5px;
+}
+
+.game-area i {
+    margin-top: 10px;
+    font-size: 120%;
+}
