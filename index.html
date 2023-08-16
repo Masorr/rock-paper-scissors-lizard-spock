@@ -12,9 +12,9 @@
       <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
     </header>
 
-    <section>
-      <!-- Game area -->
-      <div class="game-area">
+    <!-- Game area -->
+    <section class="game-area">
+      <div>
         <p>Make your choice!</p>
         <button>Rock<br /><i class="fa-solid fa-hand-back-fist"></i></button>
         <button>Paper<br /><i class="fa-solid fa-hand"></i></button>
@@ -24,9 +24,17 @@
         <button>Spock<br /><i class="fa-solid fa-hand-spock"></i></button>
       </div>
 
-      <div class="score">score and rounds</div>
-      <div class="player">player</div>
-      <div class="computer">computer</div>
+      <div class="score">
+        <h2>Round:<br><span>0</span></h3>
+      </div>
+
+      <div class="player">
+        <h3>Your score:<br><span id="player-score">0</span></h3>
+      </div>
+      
+      <div class="computer">
+        <h3>Computer score:<br><span id="computer-score">0</span></h3>
+      </div>
     </section>
 
     <footer>game rules</footer>
