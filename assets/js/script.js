@@ -13,3 +13,13 @@ let options = ["rock", "paper", "scissors", "lizard", "spock"];
 console.log(options);
 console.log(options[1] + " " + options[2]);
 console.log(buttons.length);
+
+/**
+ * Add event listener to all buttons
+ */
+for (let button of buttons) {
+    button.addEventListener("click", function () {
+        let playerChoice = this.getAttribute("data-choice");
+        playGame(playerChoice);
+    });
+}
