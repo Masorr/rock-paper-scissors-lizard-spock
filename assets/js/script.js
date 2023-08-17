@@ -41,3 +41,24 @@ function playGame(playerChoice) {
 
     updateScores(result);
 }
+
+/**
+ * Check winner function.
+ * Compares computer's choice against player's choice
+ */
+function checkWinner(computerChoice, playerChoice) {
+    if (computerChoice === playerChoice) {
+        alert("It's a tie!");
+    } else if (
+        computerChoice === "rock" && (playerChoice === "scissors" || playerChoice === "lizard") ||
+        computerChoice === "paper" && (playerChoice === "rock" || playerChoice === "spock") ||
+        computerChoice === "scissors" && (playerChoice === "paper" || playerChoice === "lizard") ||
+        computerChoice === "lizard" && (playerChoice === "paper" || playerChoice === "spock") ||
+        computerChoice === "spock" && (playerChoice === "rock" || playerChoice === "scissors")
+    ) {
+        alert("Computer won!");
+    }
+    else {
+        alert("You won!");
+    }
+}
