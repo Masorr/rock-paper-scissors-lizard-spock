@@ -102,3 +102,13 @@ function updateScore(result) {
     }
     rounds.textContent = parseInt(rounds.textContent) + 1;
 }
+
+function Restart() {
+    playerImage.src = "assets/images/rpsls.png";
+    playerImage.alt = "rpsls";
+    computerImage.src = "assets/images/rpsls.png";
+    computerImage.alt = "rpsls";
+    rounds.textContent = "0";
+    playerScore.textContent = "0";
+    computerScore.textContent = "0";
+}
