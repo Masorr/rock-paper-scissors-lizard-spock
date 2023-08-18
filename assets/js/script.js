@@ -49,10 +49,12 @@ function playGame(playerChoice) {
 /**
  * Check winner function.
  * Compares computer's choice against player's choice
+ * @param {string} computerChoice a random integer between 0 to 4
+ * @param {string} playerChoice a clicked button with value between 0 to 4
  */
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
-        alert("It's a tie!");
+        console.log("It's a tie!");
     } else if (
         computerChoice === "rock" && (playerChoice === "scissors" || playerChoice === "lizard") ||
         computerChoice === "paper" && (playerChoice === "rock" || playerChoice === "spock") ||
@@ -60,9 +62,9 @@ function checkWinner(computerChoice, playerChoice) {
         computerChoice === "lizard" && (playerChoice === "paper" || playerChoice === "spock") ||
         computerChoice === "spock" && (playerChoice === "rock" || playerChoice === "scissors")
     ) {
-        alert("Computer won!");
+        console.log("Computer won!");
     }
     else {
-        alert("You won!");
+        console.log("You won!");
     }
 }
