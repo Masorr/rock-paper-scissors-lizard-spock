@@ -32,14 +32,17 @@ function playGame(playerChoice) {
     playerImage.src = `assets/images/${options[playerChoice]}.png`;
     playerImage.alt = options[playerChoice];
 
-    let computerChoice = Math.floor(Math.random() * 5);
+    // Delays computer's choice by 1000 milliseconds.
+    // Credits to my mentor Dick Vlaanderen for making and helping with the implementation of the idea.
+    setTimeout(() => {
+        let computerChoice = Math.floor(Math.random() * 5);
 
-    computerImage.src = `assets/images/${options[computerChoice]}.png`;
-    computerImage.alt = options[computerChoice];
+        computerImage.src = `assets/images/${options[computerChoice]}.png`;
+        computerImage.alt = options[computerChoice];
 
-    let result = checkWinner(options[computerChoice], options[playerChoice]);
+        let result = checkWinner(options[computerChoice], options[playerChoice]);
+    }, 1000);
 
-    updateScores(result);
 }
 
 /**
