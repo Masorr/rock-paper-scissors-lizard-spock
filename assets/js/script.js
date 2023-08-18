@@ -51,6 +51,8 @@ function playGame(playerChoice) {
 
         let result = checkWinner(options[computerChoice], options[playerChoice]);
 
+        updateScore(result);
+
         // Reenables player controls after computer is finished
         for (let button of buttons) {
             button.disabled = false;
@@ -69,6 +71,7 @@ function playGame(playerChoice) {
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
         console.log("It's a tie!");
+        return "It's a tie!";
     } else if (
         computerChoice === "rock" && (playerChoice === "scissors" || playerChoice === "lizard") ||
         computerChoice === "paper" && (playerChoice === "rock" || playerChoice === "spock") ||
@@ -77,8 +80,25 @@ function checkWinner(computerChoice, playerChoice) {
         computerChoice === "spock" && (playerChoice === "rock" || playerChoice === "scissors")
     ) {
         console.log("Computer won!");
+        return "Computer won!";
     }
     else {
         console.log("You won!");
+        return "You won!";
     }
+}
+
+/**
+ * Update score and round function
+ * @param {string} result the result of who won the round
+ */
+function updateScore(result) {
+    if (result === "Computer won!") {
+        computerScore.textContent = parseInt(computerScore.textContent) + 1;
+    } else if (result === "You won!") {
+        playerScore.textContent = parseInt(playerScore.textContent) + 1;
+    } else {
+        // It's a tie, no incrementation needed
+    }
+    rounds.textContent = parseInt(rounds.textContent) + 1;
 }
