@@ -38,6 +38,9 @@ function playGame(playerChoice) {
     playerImage.src = `assets/images/${options[playerChoice]}.png`;
     playerImage.alt = options[playerChoice];
 
+    computerImage.src = "assets/images/empty.png";
+    computerImage.alt = "Computer thinking";
+
     // Delays computer's choice by 1000 milliseconds.
     // Credits to my mentor Dick Vlaanderen for making and helping with the implementation of the idea.
     setTimeout(() => {
