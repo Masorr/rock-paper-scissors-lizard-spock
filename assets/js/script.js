@@ -19,10 +19,22 @@ console.log(buttons.length);
  * Add event listener to all buttons
  */
 for (let button of buttons) {
+
     button.addEventListener("click", function () {
         let playerChoice = this.getAttribute("data-choice");
+
+        // After 5 rounds restart game on next click
+        const maxRounds = "5";
+        if (rounds.textContent === maxRounds) {
+            console.log("Restarting the game");
+            Restart();
+        } else {
+            // empty, could place playGame(playerChoice) call function below here to prevent game from restarting immediately on button press after round 5
+        }
+
         playGame(playerChoice);
     });
+
 }
 
 /**
@@ -103,6 +115,9 @@ function updateScore(result) {
     rounds.textContent = parseInt(rounds.textContent) + 1;
 }
 
+/**
+ * Restarts the game when called
+ */
 function Restart() {
     playerImage.src = "assets/images/rpsls.png";
     playerImage.alt = "rpsls";
