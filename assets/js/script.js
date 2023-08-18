@@ -30,6 +30,11 @@ for (let button of buttons) {
  */
 function playGame(playerChoice) {
 
+    // Disables player controls
+    for (let button of buttons) {
+        button.disabled = true;
+    }
+
     playerImage.src = `assets/images/${options[playerChoice]}.png`;
     playerImage.alt = options[playerChoice];
 
@@ -42,6 +47,12 @@ function playGame(playerChoice) {
         computerImage.alt = options[computerChoice];
 
         let result = checkWinner(options[computerChoice], options[playerChoice]);
+
+        // Reenables player controls after computer is finished
+        for (let button of buttons) {
+            button.disabled = false;
+        }
+
     }, 1000);
 
 }
