@@ -1,5 +1,7 @@
 /*
-Declare variables for DOM elements, and available options
+Declare variables for DOM elements
+And available options
+And available colors
 */
 const buttons = document.getElementsByClassName("controls");
 const playerScore = document.getElementById("player-score");
@@ -8,6 +10,14 @@ const rounds = document.getElementById("rounds");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const options = ["rock", "paper", "scissors", "lizard", "spock"];
+const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
+const colorChoice = document.getElementById("color-choice");
+
+// Allows player to select color
+colorChoice.addEventListener("change", function () {
+    let playerColor = colors[this.value];
+    console.log(playerColor);
+});
 
 // TODO remove for final push
 // Console logs for testing
