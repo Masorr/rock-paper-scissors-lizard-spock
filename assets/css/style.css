@@ -29,7 +29,7 @@ header {
 }
 
 /* Competitors */
-.player {
+#player {
     float: left;
     background-color: lightblue;
     margin-bottom: 10%;
@@ -44,7 +44,7 @@ header {
     width: 100%;
 }
 
-.computer {
+#computer {
     float: right;
     background-color: lightcoral;
     margin-bottom: 10%;

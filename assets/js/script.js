@@ -12,10 +12,14 @@ const computerImage = document.getElementById("computer-image");
 const options = ["rock", "paper", "scissors", "lizard", "spock"];
 const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
 const colorChoice = document.getElementById("color-choice");
+const player = document.getElementById("player");
+const computer = document.getElementById("computer");
 
 // Allows player to select color
 colorChoice.addEventListener("change", function () {
     let playerColor = colors[this.value];
+    player.style.backgroundColor = playerColor;
+
     console.log(playerColor);
 });
 
