@@ -160,6 +160,26 @@ function updateScore(result) {
         // It's a tie, no incrementation needed
     }
     rounds.textContent = parseInt(rounds.textContent) + 1;
+
+    // Determines who is the final winner at end of round 5
+    if (
+        rounds.textContent === "5" &&
+        parseInt(computerScore.textContent) > parseInt(playerScore.textContent)
+    ) {
+        console.log("Computer won the game!");
+    } else if (
+        rounds.textContent === "5" &&
+        parseInt(computerScore.textContent) < parseInt(playerScore.textContent)
+    ) {
+        console.log("Player won the game!");
+    } else if (
+        rounds.textContent === "5" &&
+        parseInt(computerScore.textContent) === parseInt(playerScore.textContent)
+    ) {
+        console.log("The game is a tie!");
+    } else {
+        // empty
+    }
 }
 
 /**
