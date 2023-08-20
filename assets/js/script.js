@@ -22,20 +22,28 @@ const computerName = document.getElementById("computer-color-text");
 colorChoice.addEventListener("change", function () {
     let playerColor = colors[this.value];
     let playerColorText = colorsText[this.value];
-    player.style.backgroundColor = playerColor; // Change color of div
+    player.style.backgroundColor = playerColor; // Change color of player div
     playerName.textContent = playerColorText; // Change player name in div to represent color
 
-    /* 
-    Makes new array which doesn't contain playerColor choice
-    Computer chooses a random color from this new array.
-    */
+    // Makes new arrays which doesn't contain playerColor and playerColorText choice
     let colorsLeft = colors.filter(
         function notPlayerColor(color) {
             return color !== playerColor;
         }
     );
-    let computerColor = colorsLeft[Math.floor(Math.random() * colorsLeft.length)];
-    computer.style.backgroundColor = computerColor;
+    let colorsTextLeft = colorsText.filter(
+        function notPlayerColorText(colorText) {
+            return colorText !== playerColorText;
+        }
+    );
+
+    // Computer chooses color and its 'player name' from arrays that doesn't contain player's choice
+    let random = Math.random();
+    let computerColor = colorsLeft[Math.floor(random * colorsLeft.length)];
+    computer.style.backgroundColor = computerColor; // Change color of computer div
+
+    let computerColorText = colorsTextLeft[Math.floor(random * colorsTextLeft.length)];
+    computerName.textContent = computerColorText; // Change computer name in div to represent color
 
     console.log(colorsLeft);
     console.log(playerColor);
