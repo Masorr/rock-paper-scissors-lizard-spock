@@ -11,25 +11,30 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const options = ["rock", "paper", "scissors", "lizard", "spock"];
 const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
+const colorsText = ["Grey", "Red", "Blue", "Green", "Yellow"];
 const colorChoice = document.getElementById("color-choice");
 const player = document.getElementById("player");
 const computer = document.getElementById("computer");
+const playerName = document.getElementById("player-color-text");
+const computerName = document.getElementById("computer-color-text");
 
 // Allows player to select color
 colorChoice.addEventListener("change", function () {
     let playerColor = colors[this.value];
-    player.style.backgroundColor = playerColor;
+    let playerColorText = colorsText[this.value];
+    player.style.backgroundColor = playerColor; // Change color of div
+    playerName.textContent = playerColorText; // Change player name in div to represent color
 
     /* 
     Makes new array which doesn't contain playerColor choice
-    Computer chooses a random colour from this new array.
+    Computer chooses a random color from this new array.
     */
     let colorsLeft = colors.filter(
         function notPlayerColor(color) {
             return color !== playerColor;
         }
     );
-    let computerColor = colorsLeft[Math.floor(Math.random() * (colorsLeft.length))];
+    let computerColor = colorsLeft[Math.floor(Math.random() * colorsLeft.length)];
     computer.style.backgroundColor = computerColor;
 
     console.log(colorsLeft);
