@@ -48,9 +48,11 @@ colorChoice.addEventListener("change", function () {
     console.log(colorsLeft);
     console.log(playerColor);
 
-    // Store selected colors in browser
+    // Store selected colors and corresponding name in browser
     localStorage.setItem("currentPlayerColor", playerColor);
     localStorage.setItem("currentComputerColor", computerColor);
+    localStorage.setItem("currentPlayerName", playerColorText);
+    localStorage.setItem("currentComputerName", computerColorText);
 
 });
 
@@ -173,6 +175,8 @@ function Restart() {
     computerScore.textContent = "0";
 }
 
-// Retrieve selected colors in browser
+// Retrieve selected colors and corresponding names in browser
 player.style.backgroundColor = localStorage.getItem("currentPlayerColor");
 computer.style.backgroundColor = localStorage.getItem("currentComputerColor");
+playerName.textContent = localStorage.getItem("currentPlayerName");
+computerName.textContent = localStorage.getItem("currentComputerName");
