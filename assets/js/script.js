@@ -20,7 +20,21 @@ colorChoice.addEventListener("change", function () {
     let playerColor = colors[this.value];
     player.style.backgroundColor = playerColor;
 
+    /* 
+    Makes new array which doesn't contain playerColor choice
+    Computer chooses a random colour from this new array.
+    */
+    let colorsLeft = colors.filter(
+        function notPlayerColor(color) {
+            return color !== playerColor;
+        }
+    );
+    let computerColor = colorsLeft[Math.floor(Math.random() * (colors.length - 1))];
+    computer.style.backgroundColor = computerColor;
+
+    console.log(colorsLeft);
     console.log(playerColor);
+
 });
 
 // TODO remove for final push
