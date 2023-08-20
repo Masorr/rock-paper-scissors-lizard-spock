@@ -17,6 +17,7 @@ const player = document.getElementById("player");
 const computer = document.getElementById("computer");
 const playerName = document.getElementById("player-color-text");
 const computerName = document.getElementById("computer-color-text");
+const gameWinner = document.getElementById("game-winner");
 
 // Allows player to select color
 colorChoice.addEventListener("change", function () {
@@ -166,17 +167,17 @@ function updateScore(result) {
         rounds.textContent === "5" &&
         parseInt(computerScore.textContent) > parseInt(playerScore.textContent)
     ) {
-        console.log("Computer won the game!");
+        gameWinner.textContent = "Computer won the game!";
     } else if (
         rounds.textContent === "5" &&
         parseInt(computerScore.textContent) < parseInt(playerScore.textContent)
     ) {
-        console.log("Player won the game!");
+        gameWinner.textContent = "Player won the game!";
     } else if (
         rounds.textContent === "5" &&
         parseInt(computerScore.textContent) === parseInt(playerScore.textContent)
     ) {
-        console.log("The game is a tie!");
+        gameWinner.textContent = "The game is a tie!";
     } else {
         // empty
     }
@@ -193,6 +194,7 @@ function Restart() {
     rounds.textContent = "0";
     playerScore.textContent = "0";
     computerScore.textContent = "0";
+    gameWinner.textContent = "";
 }
 
 // Retrieve selected colors and corresponding names in browser
