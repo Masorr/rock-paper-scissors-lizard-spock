@@ -35,6 +35,10 @@ colorChoice.addEventListener("change", function () {
     console.log(colorsLeft);
     console.log(playerColor);
 
+    // Store selected colors in browser
+    localStorage.setItem("currentPlayerColor", playerColor);
+    localStorage.setItem("currentComputerColor", computerColor);
+
 });
 
 // TODO remove for final push
@@ -155,3 +159,7 @@ function Restart() {
     playerScore.textContent = "0";
     computerScore.textContent = "0";
 }
+
+// Retrieve selected colors in browser
+player.style.backgroundColor = localStorage.getItem("currentPlayerColor");
+computer.style.backgroundColor = localStorage.getItem("currentComputerColor");
