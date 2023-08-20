@@ -29,7 +29,7 @@ colorChoice.addEventListener("change", function () {
             return color !== playerColor;
         }
     );
-    let computerColor = colorsLeft[Math.floor(Math.random() * (colors.length - 1))];
+    let computerColor = colorsLeft[Math.floor(Math.random() * (colorsLeft.length))];
     computer.style.backgroundColor = computerColor;
 
     console.log(colorsLeft);
