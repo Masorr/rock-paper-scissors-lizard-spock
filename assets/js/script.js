@@ -118,7 +118,7 @@ function playGame(playerChoice) {
             button.disabled = false;
         }
 
-    }, 1000);
+    }, 500);
 
 }
 
