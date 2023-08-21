@@ -21,8 +21,8 @@ const gameWinner = document.getElementById("game-winner");
 
 // Allows player to select color
 colorChoice.addEventListener("change", function () {
-    let playerColor = colors[this.value];
-    let playerColorText = colorsText[this.value];
+    const playerColor = colors[this.value];
+    const playerColorText = colorsText[this.value];
     player.style.backgroundColor = playerColor; // Change color of player div
     playerName.textContent = playerColorText; // Change player name in div to represent color
 
@@ -39,11 +39,11 @@ colorChoice.addEventListener("change", function () {
     );
 
     // Computer chooses color and its 'player name' from arrays that doesn't contain player's choice
-    let random = Math.random();
-    let computerColor = colorsLeft[Math.floor(random * colorsLeft.length)];
+    const random = Math.random();
+    const computerColor = colorsLeft[Math.floor(random * colorsLeft.length)];
     computer.style.backgroundColor = computerColor; // Change color of computer div
 
-    let computerColorText = colorsTextLeft[Math.floor(random * colorsTextLeft.length)];
+    const computerColorText = colorsTextLeft[Math.floor(random * colorsTextLeft.length)];
     computerName.textContent = computerColorText; // Change computer name in div to represent color
 
     console.log(colorsLeft);
@@ -52,7 +52,7 @@ colorChoice.addEventListener("change", function () {
     // Store selected colors and corresponding name in browser
     localStorage.setItem("currentPlayerColor", playerColor);
     localStorage.setItem("currentComputerColor", computerColor);
-    localStorage.setItem("currentPlayerName", playerColorText);
+    localStorage.setItem("currentPlayerName", playerColorText); // change to proper colorname
     localStorage.setItem("currentComputerName", computerColorText);
 
 });
@@ -75,7 +75,7 @@ for (let button of buttons) {
         const maxRounds = "5";
         if (rounds.textContent === maxRounds) {
             console.log("Restarting the game");
-            Restart();
+            restart();
         } else {
             // empty, could place playGame(playerChoice) call function below here to prevent game from restarting immediately on button press after round 5
         }
@@ -101,7 +101,7 @@ function playGame(playerChoice) {
     computerImage.src = "assets/images/empty.png";
     computerImage.alt = "Computer thinking";
 
-    // Delays computer's choice by 1000 milliseconds.
+    // Delays computer's choice by 500 milliseconds.
     // Credits to my mentor Dick Vlaanderen for making and helping with the implementation of the idea.
     setTimeout(() => {
         let computerChoice = Math.floor(Math.random() * 5);
@@ -186,7 +186,7 @@ function updateScore(result) {
 /**
  * Restarts the game when called
  */
-function Restart() {
+function restart() {
     playerImage.src = "assets/images/rpsls.png";
     playerImage.alt = "rpsls";
     computerImage.src = "assets/images/rpsls.png";
