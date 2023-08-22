@@ -194,7 +194,7 @@ function restart() {
     rounds.textContent = "0";
     playerScore.textContent = "0";
     computerScore.textContent = "0";
-    gameWinner.textContent = "";
+    gameWinner.innerHTML = "<br>";
 }
 
 // Retrieve selected colors and corresponding names in browser

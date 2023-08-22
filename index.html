@@ -14,78 +14,97 @@
 
     <!-- Game area -->
     <section class="game-area">
-
       <div>
-        <p>Pick your colour: </p>
+        <p>Pick your colour:</p>
         <label for="colors">Choose a color: </label>
         <select name="colors" id="color-choice">
-            <option value="0">Grey</option>
-            <option value="1">Red</option>
-            <option value="2">Blue</option>
-            <option value="3">Green</option>
-            <option value="4">Yellow</option>
+          <option value="0">Grey</option>
+          <option value="1">Red</option>
+          <option value="2">Blue</option>
+          <option value="3">Green</option>
+          <option value="4">Yellow</option>
         </select>
         <br />
       </div>
 
       <div>
         <p>Make your choice!</p>
-        <button class="controls" data-choice="0">Rock<br /><i class="fa-solid fa-hand-back-fist"></i></button>
-        <button class="controls" data-choice="1">Paper<br /><i class="fa-solid fa-hand"></i></button>
-        <button class="controls" data-choice="2">Scissors<br /><i class="fa-solid fa-hand-scissors"></i></button>
+        <button class="controls" data-choice="0">
+          Rock<br /><i class="fa-solid fa-hand-back-fist"></i>
+        </button>
+        <button class="controls" data-choice="1">
+          Paper<br /><i class="fa-solid fa-hand"></i>
+        </button>
+        <button class="controls" data-choice="2">
+          Scissors<br /><i class="fa-solid fa-hand-scissors"></i>
+        </button>
         <br />
-        <button class="controls" data-choice="3">Lizard<br /><i class="fa-solid fa-hand-lizard"></i></button>
-        <button class="controls" data-choice="4">Spock<br /><i class="fa-solid fa-hand-spock"></i></button>
+        <button class="controls" data-choice="3">
+          Lizard<br /><i class="fa-solid fa-hand-lizard"></i>
+        </button>
+        <button class="controls" data-choice="4">
+          Spock<br /><i class="fa-solid fa-hand-spock"></i>
+        </button>
       </div>
 
       <div class="score">
-        <h2>Round:<br><span id="rounds">0</span></h3>
-        <h2 id="game-winner"></h2>
+        <h2>Round:<br /><span id="rounds">0</span></h2>
+        <h2 id="game-winner"><br /></h2>
       </div>
 
       <div id="player">
-        <h3><span id="player-color-text">Blue</span><br>Player<br>score:<br><span id="player-score">0</span></h3>
-        <img id="player-image" src="assets/images/rpsls.png" alt="">
+        <h3>
+          <span id="player-color-text">Blue</span
+          ><br />Player<br />score:<br /><span id="player-score">0</span>
+        </h3>
+        <img id="player-image" src="assets/images/rpsls.png" alt="" />
       </div>
-      
+
       <div id="computer">
-        <h3><span id="computer-color-text">Red</span><br>Computer<br>score:<br><span id="computer-score">0</span></h3>
-        <img id="computer-image" src="assets/images/rpsls.png" alt="">
+        <h3>
+          <span id="computer-color-text">Red</span
+          ><br />Computer<br />score:<br /><span id="computer-score">0</span>
+        </h3>
+        <img id="computer-image" src="assets/images/rpsls.png" alt="" />
       </div>
     </section>
 
     <footer>
-        <p>
-            Rock beats Scissors and Lizard
-            <br>
-            <i class="fa-solid fa-hand-back-fist"></i> > 
-            <i class="fa-solid fa-hand-scissors"></i> , 
-            <i class="fa-solid fa-hand-lizard"></i>
-        </p>
-            Paper beats Rock and Spock
-            <br>
-            <i class="fa-solid fa-hand"></i> > 
-            <i class="fa-solid fa-hand-back-fist"></i> , 
-            <i class="fa-solid fa-hand-spock"></i>
-        </p>
-            Scissors beat Paper and Lizard
-            <br>
-            <i class="fa-solid fa-hand-scissors"></i> > 
-            <i class="fa-solid fa-hand"></i> , 
-            <i class="fa-solid fa-hand-lizard"></i>
-        </p>
-            Lizard beats Paper and Spock
-            <br>
-            <i class="fa-solid fa-hand-lizard"></i> > 
-            <i class="fa-solid fa-hand"></i> , 
-            <i class="fa-solid fa-hand-spock"></i>
-        </p>
-            Spock beats Rock and Scissors
-            <br>
-            <i class="fa-solid fa-hand-spock"></i> > 
-            <i class="fa-solid fa-hand-back-fist"></i> , 
-            <i class="fa-solid fa-hand-scissors"></i>
-        </p>
+      <p>
+        Rock beats Scissors and Lizard
+        <br />
+        <i class="fa-solid fa-hand-back-fist"></i> >
+        <i class="fa-solid fa-hand-scissors"></i> ,
+        <i class="fa-solid fa-hand-lizard"></i>
+      </p>
+      <p>
+        Paper beats Rock and Spock
+        <br />
+        <i class="fa-solid fa-hand"></i> >
+        <i class="fa-solid fa-hand-back-fist"></i> ,
+        <i class="fa-solid fa-hand-spock"></i>
+      </p>
+      <p>
+        Scissors beat Paper and Lizard
+        <br />
+        <i class="fa-solid fa-hand-scissors"></i> >
+        <i class="fa-solid fa-hand"></i> ,
+        <i class="fa-solid fa-hand-lizard"></i>
+      </p>
+      <p>
+        Lizard beats Paper and Spock
+        <br />
+        <i class="fa-solid fa-hand-lizard"></i> >
+        <i class="fa-solid fa-hand"></i> ,
+        <i class="fa-solid fa-hand-spock"></i>
+      </p>
+      <p>
+        Spock beats Rock and Scissors
+        <br />
+        <i class="fa-solid fa-hand-spock"></i> >
+        <i class="fa-solid fa-hand-back-fist"></i> ,
+        <i class="fa-solid fa-hand-scissors"></i>
+      </p>
     </footer>
 
     <!-- Fontawesome icons -->
