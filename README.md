@@ -1,4 +1,4 @@
-[View the site live here!]()
+[View the site live here!](https://masorr.github.io/rock-paper-scissors-lizard-spock/)
 
 # Rock, Paper, Scissors, Lizard, Spock
 
@@ -14,77 +14,87 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
 ### Existing Features
 
-- **Navigation Bar**
+- **Header**
 
-  - Featured on all three pages (and fourth hidden which is confirmation.html). Fully responsive and includes links to logo, home, about and contact and is the same on each page for easy navigation.
-  - Section allows user to easily navigate on all devices without the necessity of using the 'back' button.
+  - Featured at the top of the page and easy to read. The header clearly explains what game it is that they are playing.
 
-![Nav Bar](documentation/navbar.jpg)
+![Header](documentation)
 
-- **The landing page image**
+- **Player Customization**
 
-  - The first image show a child and several adults exercising archery. Meant to be attractive for beginners, showing people of all ages and showing a social environment.
+  - Featured right below the header. The user is allowed to customize the colour of their 'player character' from a predetermined colour set in the form of a drop-down list.
+  - The chosen colour of the user will appear in their player-box, above their name and also change the box to the chosen colour.
+  - Upon user selection of their colour, the computer will also choose its own colour, and change the colour of its box to its chosen colour.
+  - The computer will never choose the same colour as the player currently uses. This is to prevent confusion and keeping an easy visual distinction between each player.
+  - The customized colour choices are locally stored in the browser. Keeping the user's and computer's preferred colour if the page is refreshed or if the user close it and would decide to come back.
 
-![Landing Page](documentation/heroimage.jpg)
+![Colour Customization](documentation)
 
-- **Home Sections**
+- **Game Options**
 
-  - The first part of the home sections explains core information. Beginning with that everyone is welcome.
-  - The second image shows a young adult. Meant to reinforce that the club is also meant for adults.
-  - Latter part of the home sections explains other core information. Beginning with information about newcomers. Then explaining what isn't allowed in the club and what it's meant for. Then finally showing pricing information.
-  - The information is meant to be kept short and simple together with an accompanying image for easy reading.
+  - The user is presented with 5 clickable options in the game: Rock, Paper, Scissors, Lizard or Spock. Each of these clickable buttons contain a text presenting their choice and also contain a corresponding icon for better style and easier visualisation of each choice.
+  - When a button is clicked. The buttons will be locked until the computer has made its own move against the player. This makes it more user friendly to the player as it will prevent clicking two buttons or more in succession by mistake.
 
-![Home sections](documentation/home-sections.jpg)
+![Game Options](documentation)
 
-- **Times Table Section**
+- **Game Results**
 
-  - This section is present on every page above the footer as an easy and simple reminder of what times the users can visit the club.
-  - This section will be updated should the times change.
+  - The game will start at round 0 and end at round 5.
+  - The user's box on the left side will change image when the user clicks on one of the game buttons. It will change to an appropriate picture presenting the player's choice.
+  - The computer's image will turn blank with a delay to portray a more human behaviour. Conveying a feeling that it is 'thinking about its next move'.
+  - The computer's JavaScript coding will make a completely random choice between Rock, Paper, Scissors, Lizard or Spock. It will change its image to its choice and then the game will decide who the winner is of the round.
+  - When the round's winner is decided (or if it's a tie) the round will increase by 1, and if there is a winner they will be awarded 1 point more to their score.
+  - At the end of round 5, a description of the game's result will be displayed between the game buttons and game profiles: revealing the winner of the game (or if it's a tie).
+  - After round 5, the game will immediately restart if the player clicks on any game button. The game will also immediately begin through round 1, sending the player and computer straight into the game and deciding who the winner is of round 1.
 
-![Times table](documentation/timetable.jpg)
+![Game Results](documentation)
 
 - **The Footer**
 
-  - The footer section contains the number for the club as well as its address on the left side. It contains relevant social media for Local Archery Club on its right side with clickable icons for easily taking the user to respective site.
-  - The footer encourages users to stay in contact with Local Archery Club's social media.
+  - The footer contains the rules for the game presented as easily readable text with supporting icons.
 
-![Footer](documentation/footer.jpg)
-
-- **About landing page**
-
-  - The first image on the about page replaces the hero image from the home page. This is a visual aid to inform the user that they are not on the home page.
-  - The image shows a focused shot of a person wielding a bow and ready with an arrow. It's meant to summarise what the site is about: which is archery.
-
-![About Landing Page](documentation/about-heroimage.jpg)
-
-- **About section**
-
-  - The about section explains more in detail who is the target audience.
-  - It explains for which age group it's for, that it's for both new, experienced and those in between, that they can borrow or bring their own equipment, and that there are instructors present. It explains that they can also hang around and watch, sit, socialize and drink coffee or tea.
-  - It shows a gallery to keep the viewer interested, to show what it's like on the range, and to visually represent some of what was written in the 'Freedom' heading. It shows an archer in a wheelchair, an image of an experienced archer, an image of an archer with an instructor, and an image of two children practicing archery.
-  - The latter part in 'Straightforward' finishes up the section and encourages the user to visit their range.
-  - The bottom of the section contains a clickable icon meant especially for beginners that takes the user to a tutorial on www.youtube.com.
-  - The bottom of the section also contains an image of one of the archers from the image gallery, smiling towards the camera. Showing he's having fun and that he's likely a regular practicioner.
-
-![About section](documentation/about-section.jpg)
-
-- **Contact**
-
-  - This page allows the user to sign up to Local Archery Club. The user will be required to fill in their first name, last name and email address.
-  - They're told that if they want, they can leave a message and there's a clickable 'call!' link which will take the user to the footer where the club's number is.
-  - The message is optional, they can fill it in or leave it empty.
-
-  ![Contact form](documentation/contact-form.jpg)
-
-- **Confirmation**
-
-  - This page will be loaded once the form on the contact page has successfully been sent. It confirms that the user's form has been sent and received.
-
-![Confirmation message](documentation/confirmation.jpg)
+![Footer](documentation)
 
 ### Features Left to Implement
 
-- Add change language button next to logo. Since the page is meant to be a local club in sweden, original language should be swedish. Should be a simple button showing the flag of the country to inform which language the site is currently on.
+- Allow the player to choose a username. Give the player the ability to choose their username (player name) name and not only a customized colour.
+- **Reasons**: Lack of time.
+
+- Give different coloured computers personalities or even difficulties (not completely random but based also on player's actual choice). Personalities will be displayed by a text above the computer's image commenting on the player on for example: winning or loosing.
+  - Example: Grey Computer might be snarky and say "Maybe I have an algorithm that makes me win over you?" and "Not weird that the computer wins at a computer game."
+  - Yellow might be kind and say "I hoped you would win! Congrats!" and "Well played (username)!"
+  - Red might be a sore loser and say "It's all about luck anyway!" and "I demand a rematch!"
+- Make the computer do a 'smiley' based on its personality when it wins and looses after each round and at the end of the game, to give more humour and liveliness to the game.
+  - Example: Yellow might do happy smiley when the player wins and a sad smiley (or neutral smiley) when it wins over the player (since it has a 'kind' personality).
+  - Red might do a sad smiley when the player wins and a happy smiley when it wins over the player.
+- Each computer personality might have a different delay on its choices. To further increase their 'personalities' by giving the impression that some are 'fast thinkers' and others are slower.
+- **Reasons**: Lack of time.
+
+- Make icon shake (or some form of animation) in the game buttons upon being clicked.
+- **Reasons**: Lack of time.
+
+- Make the icon appear of the chosen option as a shaking or animated icon above each competitors image.
+- **Reasons**: Lack of time. Might actually not be implemented as it might not be authentically pleasing (can contribute to a feeling of being 'too much').
+
+- Historical moves area, showing what choices has been made by both player and computer.
+- **Reasons**: Lack of time.
+
+- Area showing favourite choice and favourite combination for both player and computer.
+  - Example: "Player's favourite option: Paper" and "Player's favourite combination: Lizard, then Rock".
+- **Reasons**: Lack of time.
+
+- Worst enemy. The player will have a 'Worst Enemy' which will be the coloured computer they have lost the most times against. Based on at least 3 games.
+  - Example: In 7 games. The player has won 2 times against Blue Computer, lost 1 against Green Computer, won 1 against Yellow Computer, lost 4 times against Yellow Computer.
+  - Worst Enemy: Yellow Computer (since the player has lost 4/5 games against Yellow Computer, and it is more total played games than 1/1 against Green Computer)
+- **Reasons**: Lack of time.
+  
+- Easiest enemy. The player will have a text declaring which coloured enemy computer they are winning the most against. Based on at least 3 games.
+  - Example: In 9 games. Player has won 3 times against Grey Computer, lost 2 times against Grey Computer, won 3 times against Red Computer.
+  - Easiest Enemy: Red Computer (since the player has won 3/3 of the games against this computer, and it is at least 3 games in total, compared to the 4/5 times against Grey Computer)
+- **Reasons**: Lack of time.
+
+- Circulating between opponents. At the end of each game, the player will face either the same or a different coloured computer.
+  - Example: Player wins over Red Computer. Next game the player will be randomly put against one of the potentially coloured computers, it might be anyone. Might be Red again, or it might be Yellow or Blue.
 - **Reasons**: Lack of time.
 
 ## Design
