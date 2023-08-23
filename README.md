@@ -18,7 +18,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
   - Featured at the top of the page and easy to read. The header clearly explains what game it is that they are playing.
 
-![Header](documentation)
+![Header](documentation/header.jpg)
 
 - **Player Customization**
 
@@ -28,14 +28,14 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - The computer will never choose the same colour as the player currently uses. This is to prevent confusion and keeping an easy visual distinction between each player.
   - The customized colour choices are locally stored in the browser. Keeping the user's and computer's preferred colour if the page is refreshed or if the user close it and would decide to come back.
 
-![Colour Customization](documentation)
+![Colour Customization](documentation/colour-customization.jpg)
 
 - **Game Options**
 
   - The user is presented with 5 clickable options in the game: Rock, Paper, Scissors, Lizard or Spock. Each of these clickable buttons contain a text presenting their choice and also contain a corresponding icon for better style and easier visualisation of each choice.
   - When a button is clicked. The buttons will be locked until the computer has made its own move against the player. This makes it more user friendly to the player as it will prevent clicking two buttons or more in succession by mistake.
 
-![Game Options](documentation)
+![Game Options](documentation/game-options.jpg)
 
 - **Game Results**
 
@@ -47,13 +47,14 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - At the end of round 5, a description of the game's result will be displayed between the game buttons and game profiles: revealing the winner of the game (or if it's a tie).
   - After round 5, the game will immediately restart if the player clicks on any game button. The game will also immediately begin through round 1, sending the player and computer straight into the game and deciding who the winner is of round 1.
 
-![Game Results](documentation)
+![Game Results Start](documentation/game-results-start.jpg)
+![Game Results](documentation/game-results.jpg)
 
 - **The Footer**
 
   - The footer contains the rules for the game presented as easily readable text with supporting icons.
 
-![Footer](documentation)
+![Footer](documentation/footer.jpg)
 
 ### Features Left to Implement
 
@@ -101,35 +102,30 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
 - **Wireframes**
 
-  - The initial home page wireframe.
-    ![Wirefrome home](wireframes/wireframe-home.png)
-  - Initial about page wireframe.
-    ![Wireframe about](wireframes/wireframe-about.png)
-  - Initial contact page wireframe.
-    ![Wireframe contact](wireframes/wireframe-contact.png)
+  - The initial game page wireframe.
+    ![Wireframe game](wireframes/wireframe-game.png)
 
 - **Wireframe / End Design Likeness**
 
-  - Home page
+  - Game page
 
-    - Image on right is taller, taking up the right space. Price heading is placed on left. No crossbows heading is added.
-    - The uploaded image was taller than expected and formed the new idea of the end design, which result was more aesthetically pleasing.
-    - **Reasons**: Better design, clarifying what's prohibited.
-
-  - About page
-
-    - Image gallery added.
-    - Link to youtube tutorial and final image added.
-    - **Reasons**: Suggested by mentor. Adds more information for what the club is about, and makes the page more attractive.
-
-  - Contact page
-    - Removed payments and questions paragraph between form and logo.
-    - **Reasons**: Suggested by mentor. Not needed.
+    - 'You won!' div does not have a border or styling as could be suggested by the wireframe.
+    - Buttons have consistent spacing between each other. They don't change based on screen media.
+    - **Reasons**: Didn't feel iike they were necessary. Keeping it simple. Better design.
 
 - **Colours**
 
-  - Lightblue background is chosen because it is a relaxing/cool colour. Meant to instill calmness and evoking a "freedom of outdoors skyview" feeling.
-  - Brown colour is chosen to give a natural and "woody" feeling.
+  - The presented colour names in the game are not the actual semantic colours in the game.
+   - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
+  - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
+
+  - Footer has inverted colours. Its background is black while the text is white.
+  - **Reasons**: Better UX. To make the rules clearly separated from the rest of the document.
+
+- **Style**
+
+   - All 5 options that are playable in the game: all 5 are represented by both literal text and an illustration or icon.
+   - **Reasons**: Consistency. Clearly associating what (image)/(hand gesture) are associated with what literal choice. Making the game easier to read and learn.
 
 ## Testing
 
