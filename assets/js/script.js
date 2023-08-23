@@ -50,10 +50,12 @@ colorChoice.addEventListener("change", function () {
     console.log(playerColor);
 
     // Store selected colors and corresponding name in browser
+    localStorage.setItem("storeChoices", true);
     localStorage.setItem("currentPlayerColor", playerColor);
     localStorage.setItem("currentComputerColor", computerColor);
     localStorage.setItem("currentPlayerName", playerColorText); // change to proper colorname
     localStorage.setItem("currentComputerName", computerColorText);
+    localStorage.setItem("currentPlayerColorSelected", this.value);
 
 });
 
@@ -198,7 +200,12 @@ function restart() {
 }
 
 // Retrieve selected colors and corresponding names in browser
-player.style.backgroundColor = localStorage.getItem("currentPlayerColor");
-computer.style.backgroundColor = localStorage.getItem("currentComputerColor");
-playerName.textContent = localStorage.getItem("currentPlayerName");
-computerName.textContent = localStorage.getItem("currentComputerName");
+if (localStorage.getItem("storeChoices") === "true") {
+    player.style.backgroundColor = localStorage.getItem("currentPlayerColor");
+    computer.style.backgroundColor = localStorage.getItem("currentComputerColor");
+    playerName.textContent = localStorage.getItem("currentPlayerName");
+    computerName.textContent = localStorage.getItem("currentComputerName");
+    colorChoice.value = localStorage.getItem("currentPlayerColorSelected");
+} else {
+    // nothing
+}
