@@ -4,71 +4,89 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Game: Rock, Paper, Scissors, Lizard, Spock"
+    />
+    <meta
+      name="keywords"
+      content="rock paper scissors lizard spock, rock, paper, scissors, lizard, spock, rpsls, game"
+    />
+
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Document</title>
+
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
   </head>
+
   <body>
     <header>
       <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
     </header>
 
-    <!-- Game area -->
-    <section class="game-area">
-      <div>
-        <p>Pick your colour:</p>
-        <label for="color-choice">Choose a color: </label>
-        <select name="color-choice" id="color-choice">
-          <option value="0">Grey</option>
-          <option value="1">Red</option>
-          <option value="2" selected>Blue</option>
-          <option value="3">Green</option>
-          <option value="4">Yellow</option>
-        </select>
-        <br />
-      </div>
+    <main>
+      <!-- game area -->
+      <section class="game-area">
+        <!-- colour customization -->
+        <div>
+          <p>Pick your colour:</p>
+          <label for="color-choice">Choose a color: </label>
+          <select name="color-choice" id="color-choice">
+            <option value="0">Grey</option>
+            <option value="1">Red</option>
+            <option value="2" selected>Blue</option>
+            <option value="3">Green</option>
+            <option value="4">Yellow</option>
+          </select>
+          <br />
+        </div>
 
-      <div>
-        <p>Make your choice!</p>
-        <button class="controls" data-choice="0">
-          Rock<br /><i class="fa-solid fa-hand-back-fist"></i>
-        </button>
-        <button class="controls" data-choice="1">
-          Paper<br /><i class="fa-solid fa-hand"></i>
-        </button>
-        <button class="controls" data-choice="2">
-          Scissors<br /><i class="fa-solid fa-hand-scissors"></i>
-        </button>
-        <br />
-        <button class="controls" data-choice="3">
-          Lizard<br /><i class="fa-solid fa-hand-lizard"></i>
-        </button>
-        <button class="controls" data-choice="4">
-          Spock<br /><i class="fa-solid fa-hand-spock"></i>
-        </button>
-      </div>
+        <!-- game area buttons -->
+        <div>
+          <p>Make your choice!</p>
+          <button class="controls" data-choice="0">
+            Rock<br /><i class="fa-solid fa-hand-back-fist"></i>
+          </button>
+          <button class="controls" data-choice="1">
+            Paper<br /><i class="fa-solid fa-hand"></i>
+          </button>
+          <button class="controls" data-choice="2">
+            Scissors<br /><i class="fa-solid fa-hand-scissors"></i>
+          </button>
+          <br />
+          <button class="controls" data-choice="3">
+            Lizard<br /><i class="fa-solid fa-hand-lizard"></i>
+          </button>
+          <button class="controls" data-choice="4">
+            Spock<br /><i class="fa-solid fa-hand-spock"></i>
+          </button>
+        </div>
 
-      <div class="score">
-        <h2>Round:<br /><span id="rounds">0</span></h2>
-        <h2 id="game-winner"><br /></h2>
-      </div>
+        <!-- round counter and game result -->
+        <!-- unused class attribute in div element, remove -->
+        <div class="score">
+          <h2>Round:<br /><span id="rounds">0</span></h2>
+          <h2 id="game-winner"><br /></h2>
+        </div>
 
-      <div id="player">
-        <h3>
-          <span id="player-color-text">Blue</span
-          ><br />Player<br />score:<br /><span id="player-score">0</span>
-        </h3>
-        <img id="player-image" src="assets/images/rpsls.png" alt="" />
-      </div>
+        <!-- player and computer divs -->
+        <div id="player">
+          <h3>
+            <span id="player-color-text">Blue</span
+            ><br />Player<br />score:<br /><span id="player-score">0</span>
+          </h3>
+          <img id="player-image" src="assets/images/rpsls.png" alt="" />
+        </div>
+        <div id="computer">
+          <h3>
+            <span id="computer-color-text">Red</span
+            ><br />Computer<br />score:<br /><span id="computer-score">0</span>
+          </h3>
+          <img id="computer-image" src="assets/images/rpsls.png" alt="" />
+        </div>
+      </section>
+    </main>
 
-      <div id="computer">
-        <h3>
-          <span id="computer-color-text">Red</span
-          ><br />Computer<br />score:<br /><span id="computer-score">0</span>
-        </h3>
-        <img id="computer-image" src="assets/images/rpsls.png" alt="" />
-      </div>
-    </section>
-
+    <!-- footer -->
     <footer>
       <p>
         Rock beats Scissors and Lizard

@@ -116,7 +116,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 - **Colours**
 
   - The presented colour names in the game are not the actual semantic colours in the game.
-   - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
+  - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
   - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
 
   - Footer has inverted colours. Its background is black while the text is white.
@@ -124,8 +124,8 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
 - **Style**
 
-   - All 5 options that are playable in the game: all 5 are represented by both literal text and an illustration or icon.
-   - **Reasons**: Consistency. Clearly associating what (image)/(hand gesture) are associated with what literal choice. Making the game easier to read and learn.
+  - All 5 options that are playable in the game: all 5 are represented by both literal text and an illustration or icon.
+  - **Reasons**: Consistency. Clearly associating what (image)/(hand gesture) are associated with what literal choice. Making the game easier to read and learn.
 
 ## Testing
 
