@@ -12,8 +12,8 @@ const computerScore = document.getElementById("computer-score");
 const rounds = document.getElementById("rounds");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const playerName = document.getElementById("player-color-text");
-const computerName = document.getElementById("computer-color-text");
+const playerColorTextDisplay = document.getElementById("player-color-text-display");
+const computerColorTextDisplay = document.getElementById("computer-color-text-display");
 const gameWinner = document.getElementById("game-winner");
 const options = ["rock", "paper", "scissors", "lizard", "spock"];
 const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
@@ -24,7 +24,7 @@ colorChoice.addEventListener("change", function () {
     const playerColor = colors[this.value];
     const playerColorText = colorsText[this.value];
     player.style.backgroundColor = playerColor; // Change color of player div
-    playerName.textContent = playerColorText; // Change player name in div to represent color
+    playerColorTextDisplay.textContent = playerColorText; // Change player color-name in div to represent color
 
     // Makes new arrays which doesn't contain playerColor and playerColorText choice
     let colorsLeft = colors.filter(
@@ -38,13 +38,13 @@ colorChoice.addEventListener("change", function () {
         }
     );
 
-    // Computer chooses color and its 'player name' from arrays that doesn't contain player's choice
+    // Computer chooses color and its 'player color-name' from arrays that doesn't contain player's choice
     const random = Math.random();
     const computerColor = colorsLeft[Math.floor(random * colorsLeft.length)];
     computer.style.backgroundColor = computerColor; // Change color of computer div
 
     const computerColorText = colorsTextLeft[Math.floor(random * colorsTextLeft.length)];
-    computerName.textContent = computerColorText; // Change computer name in div to represent color
+    computerColorTextDisplay.textContent = computerColorText; // Change computer color-name in div to represent color
 
     console.log(colorsLeft);
     console.log(playerColor);
@@ -53,8 +53,8 @@ colorChoice.addEventListener("change", function () {
     localStorage.setItem("storeChoices", true);
     localStorage.setItem("currentPlayerColor", playerColor);
     localStorage.setItem("currentComputerColor", computerColor);
-    localStorage.setItem("currentPlayerName", playerColorText); // change to proper colorname
-    localStorage.setItem("currentComputerName", computerColorText);
+    localStorage.setItem("currentPlayerColorTextDisplay", playerColorText);
+    localStorage.setItem("currentComputerColorTextDisplay", computerColorText);
     localStorage.setItem("currentPlayerColorSelected", this.value);
 
 });
@@ -199,12 +199,12 @@ function restart() {
     gameWinner.innerHTML = "<br>";
 }
 
-// Retrieve selected colors and corresponding names in browser
+// Retrieve selected colors and corresponding color-names in browser
 if (localStorage.getItem("storeChoices") === "true") {
     player.style.backgroundColor = localStorage.getItem("currentPlayerColor");
     computer.style.backgroundColor = localStorage.getItem("currentComputerColor");
-    playerName.textContent = localStorage.getItem("currentPlayerName");
-    computerName.textContent = localStorage.getItem("currentComputerName");
+    playerColorTextDisplay.textContent = localStorage.getItem("currentPlayerColorTextDisplay");
+    computerColorTextDisplay.textContent = localStorage.getItem("currentComputerColorTextDisplay");
     colorChoice.value = localStorage.getItem("currentPlayerColorSelected");
 } else {
     // nothing
