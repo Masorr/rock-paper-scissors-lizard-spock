@@ -3,21 +3,21 @@ Declare variables for DOM elements
 And available options
 And available colors
 */
+const colorChoice = document.getElementById("color-choice");
 const buttons = document.getElementsByClassName("controls");
+const player = document.getElementById("player");
+const computer = document.getElementById("computer");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const rounds = document.getElementById("rounds");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
-const options = ["rock", "paper", "scissors", "lizard", "spock"];
-const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
-const colorsText = ["Grey", "Red", "Blue", "Green", "Yellow"];
-const colorChoice = document.getElementById("color-choice");
-const player = document.getElementById("player");
-const computer = document.getElementById("computer");
 const playerName = document.getElementById("player-color-text");
 const computerName = document.getElementById("computer-color-text");
 const gameWinner = document.getElementById("game-winner");
+const options = ["rock", "paper", "scissors", "lizard", "spock"];
+const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
+const colorsText = ["Grey", "Red", "Blue", "Green", "Yellow"];
 
 // Allows player to select color
 colorChoice.addEventListener("change", function () {
