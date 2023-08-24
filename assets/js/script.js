@@ -46,9 +46,6 @@ colorChoice.addEventListener("change", function () {
     const computerColorText = colorsTextLeft[Math.floor(random * colorsTextLeft.length)];
     computerColorTextDisplay.textContent = computerColorText; // Change computer color-name in div to represent color
 
-    console.log(colorsLeft);
-    console.log(playerColor);
-
     // Store selected colors and corresponding name in browser
     localStorage.setItem("storeChoices", true);
     localStorage.setItem("currentPlayerColor", playerColor);
@@ -58,12 +55,6 @@ colorChoice.addEventListener("change", function () {
     localStorage.setItem("currentPlayerColorSelected", this.value);
 
 });
-
-// TODO remove for final push
-// Console logs for testing
-console.log(options);
-console.log(options[1] + " " + options[2]);
-console.log(buttons.length);
 
 /**
  * Add event listener to all buttons
@@ -76,11 +67,10 @@ for (let button of buttons) {
         // After 5 rounds restart game on next click
         const maxRounds = "5";
         if (rounds.textContent === maxRounds) {
-            console.log("Restarting the game");
             restart();
-        } else {
-            // empty, could place playGame(playerChoice) call function below here to prevent game from restarting immediately on button press after round 5
-        }
+        } /* Could make an else statement and place playGame(playerChoice) call function
+            inside to prevent game from restarting immediately on button press after round 5
+            */
 
         playGame(playerChoice);
     });
@@ -132,7 +122,6 @@ function playGame(playerChoice) {
  */
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice === playerChoice) {
-        console.log("It's a tie!");
         return "It's a tie!";
     } else if (
         computerChoice === "rock" && (playerChoice === "scissors" || playerChoice === "lizard") ||
@@ -141,11 +130,9 @@ function checkWinner(computerChoice, playerChoice) {
         computerChoice === "lizard" && (playerChoice === "paper" || playerChoice === "spock") ||
         computerChoice === "spock" && (playerChoice === "rock" || playerChoice === "scissors")
     ) {
-        console.log("Computer won!");
         return "Computer won!";
     }
     else {
-        console.log("You won!");
         return "You won!";
     }
 }
@@ -159,9 +146,7 @@ function updateScore(result) {
         computerScore.textContent = parseInt(computerScore.textContent) + 1;
     } else if (result === "You won!") {
         playerScore.textContent = parseInt(playerScore.textContent) + 1;
-    } else {
-        // It's a tie, no incrementation needed
-    }
+    }  // If it's a tie, no incrementation needed
     rounds.textContent = parseInt(rounds.textContent) + 1;
 
     // Determines who is the final winner at end of round 5
@@ -180,8 +165,6 @@ function updateScore(result) {
         parseInt(computerScore.textContent) === parseInt(playerScore.textContent)
     ) {
         gameWinner.textContent = "The game is a tie!";
-    } else {
-        // empty
     }
 }
 
@@ -206,6 +189,4 @@ if (localStorage.getItem("storeChoices") === "true") {
     playerColorTextDisplay.textContent = localStorage.getItem("currentPlayerColorTextDisplay");
     computerColorTextDisplay.textContent = localStorage.getItem("currentComputerColorTextDisplay");
     colorChoice.value = localStorage.getItem("currentPlayerColorSelected");
-} else {
-    // nothing
 }
