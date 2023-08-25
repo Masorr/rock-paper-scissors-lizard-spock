@@ -222,6 +222,7 @@ Link to live site - <https://masorr.github.io/rock-paper-scissors-lizard-spock/>
     - /workspaces/rock-paper-scissors-lizard-spock/assets/images/rpsls.png
     - /workspaces/rock-paper-scissors-lizard-spock/assets/images/scissors.png
     - /workspaces/rock-paper-scissors-lizard-spock/assets/images/spock.png
+    - /workspaces/rock-paper-scissors-lizard-spock/favicon.ico
 
 ## Thanks
 
