@@ -61,14 +61,15 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 - Allow the player to choose a username. Give the player the ability to choose their username (player name) name and not only a customized colour.
   - **Reasons**: Lack of time.
 
-- Give different coloured computers personalities or even difficulties (not completely random but based also on player's actual choice). Personalities will be displayed by a text above the computer's image commenting on the player on for example: winning or loosing.
-  - Example: Grey Computer might be snarky and say "Maybe I have an algorithm that makes me win over you?" and "Not weird that the computer wins at a computer game."
-  - Yellow might be kind and say "I hoped you would win! Congrats!" and "Well played (username)!"
-  - Red might be a sore loser and say "It's all about luck anyway!" and "I demand a rematch!"
-- Make the computer do a 'smiley' based on its personality when it wins and looses after each round and at the end of the game, to give more humour and liveliness to the game.
-  - Example: Yellow might do happy smiley when the player wins and a sad smiley (or neutral smiley) when it wins over the player (since it has a 'kind' personality).
-  - Red might do a sad smiley when the player wins and a happy smiley when it wins over the player.
-- Each computer personality might have a different delay on its choices. To further increase their 'personalities' by giving the impression that some are 'fast thinkers' and others are slower.
+- Computer Personalities.
+  - Give different coloured computers personalities or even difficulties (not completely random but based also on player's actual choice). Personalities will be displayed by a text above the computer's image commenting on the player on for example: winning or loosing.
+    - Example: Grey Computer might be snarky and say "Maybe I have an algorithm that makes me win over you?" and "Not weird that the computer wins at a computer game."
+    - Yellow might be kind and say "I hoped you would win! Congrats!" and "Well played (username)!"
+    - Red might be a sore loser and say "It's all about luck anyway!" and "I demand a rematch!"
+  - Make the computer do a 'smiley' based on its personality when it wins and looses after each round and at the end of the game, to give more humour and liveliness to the game.
+    - Example: Yellow might do happy smiley when the player wins and a sad smiley (or neutral smiley) when it wins over the player (since it has a 'kind' personality).
+    - Red might do a sad smiley when the player wins and a happy smiley when it wins over the player.
+  - Each computer personality might have a different delay on its choices. To further increase their 'personalities' by giving the impression that some are 'fast thinkers' and others are slower.
   - **Reasons**: Lack of time.
 
 - Make icon shake (or some form of animation) in the game buttons upon being clicked.
