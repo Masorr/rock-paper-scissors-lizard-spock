@@ -59,7 +59,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 ### Features Left to Implement
 
 - Allow the player to choose a username. Give the player the ability to choose their username (player name) name and not only a customized colour.
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Give different coloured computers personalities or even difficulties (not completely random but based also on player's actual choice). Personalities will be displayed by a text above the computer's image commenting on the player on for example: winning or loosing.
   - Example: Grey Computer might be snarky and say "Maybe I have an algorithm that makes me win over you?" and "Not weird that the computer wins at a computer game."
@@ -69,37 +69,37 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - Example: Yellow might do happy smiley when the player wins and a sad smiley (or neutral smiley) when it wins over the player (since it has a 'kind' personality).
   - Red might do a sad smiley when the player wins and a happy smiley when it wins over the player.
 - Each computer personality might have a different delay on its choices. To further increase their 'personalities' by giving the impression that some are 'fast thinkers' and others are slower.
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Make icon shake (or some form of animation) in the game buttons upon being clicked.
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Make the icon appear of the chosen option as a shaking or animated icon above each competitors image.
-- **Reasons**: Lack of time. Might actually not be implemented as it might not be authentically pleasing (can contribute to a feeling of being 'too much').
+  - **Reasons**: Lack of time. Might actually not be implemented as it might not be authentically pleasing (can contribute to a feeling of being 'too much').
 
 - Historical moves area, showing what choices has been made by both player and computer.
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Area showing favourite choice and favourite combination for both player and computer.
   - Example: "Player's favourite option: Paper" and "Player's favourite combination: Lizard, then Rock".
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Worst enemy. The player will have a 'Worst Enemy' which will be the coloured computer they have lost the most times against. Based on at least 3 games.
   - Example: In 7 games. The player has won 2 times against Blue Computer, lost 1 against Green Computer, won 1 against Yellow Computer, lost 4 times against Yellow Computer.
   - Worst Enemy: Yellow Computer (since the player has lost 4/5 games against Yellow Computer, and it is more total played games than 1/1 against Green Computer)
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
   
 - Easiest enemy. The player will have a text declaring which coloured enemy computer they are winning the most against. Based on at least 3 games.
   - Example: In 9 games. Player has won 3 times against Grey Computer, lost 2 times against Grey Computer, won 3 times against Red Computer.
   - Easiest Enemy: Red Computer (since the player has won 3/3 of the games against this computer, and it is at least 3 games in total, compared to the 4/5 times against Grey Computer)
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Circulating between opponents. At the end of each game, the player will face either the same or a different coloured computer.
   - Example: Player wins over Red Computer. Next game the player will be randomly put against one of the potentially coloured computers, it might be anyone. Might be Red again, or it might be Yellow or Blue.
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Addition so player can choose which computer they want to fight. If they want to fight a computer that has the same colour as the player an alert will come up or message which will say, 'YOU ARE FIGHTING YOUR OWN COLOUR: Do you wish to proceed?'.
-- **Reasons**: Lack of time.
+  - **Reasons**: Lack of time.
 
 - Addition so the player can meet another player instead of computer. Switch out computer on the right part to become a second player. Give keyboard controls to the game.
   - Example: controls w+a (rock), w+s (paper), w+d (scissors), s+a (lizard), s+d (spock) is left player. Same combo but for arrows are for right player: Arrow-up+arrow-left (rock), arrow-up+arrow-down (rock), arrow-up+arrow-right (scissors), arrow-down+arrow-left (lizard), arrow-down+arrow-rigth (spock).
@@ -117,16 +117,16 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
     - 'You won!' div does not have a border or styling as could be suggested by the wireframe.
     - Buttons have consistent spacing between each other. They don't change based on screen media.
-    - **Reasons**: Didn't feel iike they were necessary. Keeping it simple. Better design.
+      - **Reasons**: Didn't feel iike they were necessary. Keeping it simple. Better design.
 
 - **Colours**
 
   - The presented colour names in the game are not the actual semantic colours in the game.
     - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
-  - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
+    - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
 
   - Footer has inverted colours. Its background is black while the text is white.
-  - **Reasons**: Better UX. To make the rules clearly separated from the rest of the document.
+    - **Reasons**: Better UX. To make the rules clearly separated from the rest of the document.
 
 - **Style**
 
@@ -157,19 +157,22 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
     - **Reasons**: Current lack of knowledge of how to circumvent this type of warning.
 
 - HTML validator results for index.html, about.html, contact.html and confirmation.html
+
   ![HTML validation](documentation/validate-html.jpg)
 
 - CSS validator result for style.css
+
   ![CSS validation](documentation/validate-css.jpg)
 
 - JSHint validator result for script.js
+
   ![JSHint validation](documentation/validate-jshint.jpg)
 
 ### Media
 
 - Tested on Microsoft Edge, Mozilla Firefox and Chrome.
 - Chrome development tools were used through the process of checking and configuring responsiveness. Adjustments were made accordingly.
-- Screen media mockup tested on <https://ui.dev/amiresponsive?url=https://masorr.github.io/local-archery-club/>
+- Screen media mockup tested on <https://ui.dev/amiresponsive?url=https://masorr.github.io/rock-paper-scissors-lizard-spock/>
 - Tested by changing sizes on browser tabs.
 - Tested on desktop, laptop and mobile.
 
