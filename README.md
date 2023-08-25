@@ -98,6 +98,12 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - Example: Player wins over Red Computer. Next game the player will be randomly put against one of the potentially coloured computers, it might be anyone. Might be Red again, or it might be Yellow or Blue.
 - **Reasons**: Lack of time.
 
+- Addition so player can choose which computer they want to fight. If they want to fight a computer that has the same colour as the player an alert will come up or message which will say, 'YOU ARE FIGHTING YOUR OWN COLOUR: Do you wish to proceed?'.
+- **Reasons**: Lack of time.
+
+- Addition so the player can meet another player instead of computer. Switch out computer on the right part to become a second player. Give keyboard controls to the game.
+  - Example: controls w+a (rock), w+s (paper), w+d (scissors), s+a (lizard), s+d (spock) is left player. Same combo but for arrows are for right player: Arrow-up+arrow-left (rock), arrow-up+arrow-down (rock), arrow-up+arrow-right (scissors), arrow-down+arrow-left (lizard), arrow-down+arrow-rigth (spock).
+
 ## Design
 
 - **Wireframes**
