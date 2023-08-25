@@ -116,7 +116,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 - **Colours**
 
   - The presented colour names in the game are not the actual semantic colours in the game.
-  - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
+    - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
   - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
 
   - Footer has inverted colours. Its background is black while the text is white.
@@ -136,16 +136,28 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 ### Validator Testing
 
 - HTML
-  - No errors or warnings were returned on any of the html pages when passing through the html validator: <https://validator.w3.org/#validate_by_input>
-- CSS
+  - No errors were found but 1 warning was returned on the html page when passing through the html validator: <https://validator.w3.org/>
+    - Empty heading warning on line 67.
+    - **Reasons**: JavaScript will add text into this header of the game's result. It begins as empty, and when the game restarts it turns back into this same state.
+  - Info messages are coming from an automatic formating in the index.html upon saving changes while using the Codeanywhere IDE and the Code Institute template. It is not the programmer's intention to include these.
+    - **Reasons**: Current lack of understanding of how to turn off or fix this type of formatting without manually fixing '28 typos' every time a change is made to the index.html.
 
+- CSS
   - No errors were found when passing through the css validator: <https://jigsaw.w3.org/css-validator/>
 
+- JavaScript
+  - No errors were found but 1 warning was returned when passing through the jshint validator <https://jshint.com/>
+    - Function declared within loop referencing outer scoped variable.
+    - **Reasons**: Current lack of knowledge of how to circumvent this type of warning.
+
 - HTML validator results for index.html, about.html, contact.html and confirmation.html
-  ![HTML validation](documentation/validatehtml.jpg)
+  ![HTML validation](documentation/validate-html.jpg)
 
 - CSS validator result for style.css
-  ![CSS validation](documentation/validatecss.jpg)
+  ![CSS validation](documentation/validate-css.jpg)
+
+- JSHint validator result for script.js
+  ![JSHint validation](documentation/validate-jshint.jpg)
 
 ### Media
 
@@ -157,30 +169,15 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
 ### Lighthouse Testing
 
-- Home page
+- Game page
 
-  ![Lighthouse home page](documentation/lighthouse-home.jpg)
-
-- About page
-
-  ![Lighthouse about page](documentation/lighthouse-about.jpg)
-
-- Contact page
-
-  ![Lighthouse contact page](documentation/lighthouse-contact.jpg)
-
-- Confirmation page
-
-  ![Lighthouse confirmation page](documentation/lighthouse-confirmation.jpg)
+  ![Lighthouse game page](documentation/lighthouse-game.jpg)
 
 ### Fixed Bugs
 
-- Media screen when max-width go below 760px, menu jumps down below logo. However the menu is reversed, beginning with contact about home instead of home about contact.
-
-  - Bug was fixed when using px instead of % in width for paddings and margins.
-
-- Send button on form is clickable only on 'Send!' text instead of the whole button.
-  - Bug wasn't encounterable when checking last time. Uncertain how it was fixed.
+- Upon fresh page start. No colour is selected, player box is blue and computer is red. However the blue and red colour-text tags don't appear above player or computer text and the selected colour is blank. This issue is gone after colour is picked, but will reappear when browser is terminated and the page is loaded for the first time again.
+  - Bug was fixed with proper understanding of localstorage syntax and that retrieved values are stored as strings. <https://www.w3schools.com/jsref/met_storage_getitem.asp>
+  - The colorChoice eventlistener triggers a true value. If the value is true: then player's and computer's choices will be locally stored and also retrieved. If the eventlistener has not been triggered: the values will be shown as they are from the HTML.
 
 ### Unfixed Bugs
 
@@ -189,48 +186,44 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 ## Deployment
 
 - The site was deployed to GitHub pages through following steps:
-  - On the repository page, go to 'Settings' in navbar. <https://github.com/Masorr/local-archery-club> --> <https://github.com/Masorr/local-archery-club/settings>
-  - In settings go to 'Pages' under 'Code and automation' on the left. <https://github.com/Masorr/local-archery-club/settings/pages>
+  - On the repository page, go to 'Settings' in navbar. <https://github.com/Masorr/rock-paper-scissors-lizard-spock> --> <https://github.com/Masorr/rock-paper-scissors-lizard-spock/settings>
+  - In settings go to 'Pages' under 'Code and automation' on the left. <https://github.com/Masorr/rock-paper-scissors-lizard-spock/settings/pages>
   - Select main branch and hit 'Save'.
   - Refresh page and hit 'Visit site' on the new 'Your site is live at' box to view the successful deployment.
 
-Link to live site - <https://masorr.github.io/local-archery-club/>
+Link to live site - <https://masorr.github.io/rock-paper-scissors-lizard-spock/>
 
 - Cloning the Repository:
   - On the repository page, click the 'Code' box.
-  - Pick local then HTTPS and copy the link that is shown, which is: <https://github.com/Masorr/local-archery-club.git>
+  - Pick local then HTTPS and copy the link that is shown, which is: <https://github.com/Masorr/rock-paper-scissors-lizard-spock.git>
   - Open the terminal in your code editor and specify the directory you want to have your clone.
-  - Type 'git clone' into your terminal and paste the link <https://github.com/Masorr/local-archery-club.git> and hit enter.
+  - Type 'git clone' into your terminal and paste the link <https://github.com/Masorr/rock-paper-scissors-lizard-spock.git> and hit enter.
 
 ## Credits
 
 ### Content
 
-- HTML, CSS, layout, structuring and understanding of concepts was made with the help by the course material from Code Institute and inspired particularly by the Love Running project.
-- HTML form and CSS for the form in contact was taken from Love Running project at the Code Institute program. Some attributes and elements have been changed but it has been used as the template.
+- HTML, CSS, JavaScript, layout, structuring and understanding of concepts was made with the help by the course material from Code Institute and was heavily inspired by the ULTIMATE Rock Paper Scissors project.
+- Idea of function delay for computer's choice was inspired by my mentor Dick Vlaanderen and came from <https://www.w3schools.com/jsref/met_win_settimeout.asp>
 - All icons were taken from <https://fontawesome.com/>
-- In CSS the code concept for styling with flex display 'display: flex' and 'justify-content: center' for centering images on about page came from <https://blog.hubspot.com/website/center-an-image-in-html>
-- In CSS the 'flex-wrap: flex' came from <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
-- README template was copied from Love Running Project given by Code Institute.
+- In JavaScript the code concept for locally storing user's and computer's choices of colour came from <https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage>, <https://www.w3schools.com/jsref/prop_win_localstorage.asp> and <https://www.w3schools.com/jsref/met_storage_getitem.asp>
+- Finding the correct colour keywords for JavaScript and CSS to portray user friendly colours came from <https://www.w3.org/wiki/CSS/Properties/color/keywords>
+- Code for parseInt() in JavaScript came from <https://www.w3schools.com/jsref/jsref_parseint.asp>
+- The idea of using filter() to make a new array for computer that doesn't include player's current choice of colour came from <https://www.w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html>
+- README template was copied from previous work (Local Archery Club) and was originally copied from Love Running Project given by Code Institute.
 
 ### Media
 
-- All images were taken from pexels.com <https://www.pexels.com/>
-  - images by Mikhail Nilov <https://www.pexels.com/@mikhail-nilov/>
-    - file:///workspaces/local-archery-club/assets/images/pex-mn-young-male.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-mn-wheelchair-archer.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-mn-wheelchair-archer-smile.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-mn-instructor.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-mn-hands.jpg
-  - images by RDNE Stock project <https://www.pexels.com/@rdne/>
-    - file:///workspaces/local-archery-club/assets/images/pex-rsp-experienced-archer.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-rsp-children.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-rsp-child-and-adults.jpg
-    - file:///workspaces/local-archery-club/assets/images/pex-rsp-bows.jpg
+- Image was taken from openclipart.org <https://openclipart.org/detail/325665/rock-paper-scissors-lizard-spock>
+  - images by gonz4 <https://openclipart.org/artist/gonz4>
+    - /workspaces/rock-paper-scissors-lizard-spock/assets/images/lizard.png
+    - /workspaces/rock-paper-scissors-lizard-spock/assets/images/paper.png
+    - /workspaces/rock-paper-scissors-lizard-spock/assets/images/rock.png
+    - /workspaces/rock-paper-scissors-lizard-spock/assets/images/rpsls.png
+    - /workspaces/rock-paper-scissors-lizard-spock/assets/images/scissors.png
+    - /workspaces/rock-paper-scissors-lizard-spock/assets/images/spock.png
 
 ## Thanks
 
-s
-
-- I want to thank Code Institute and their tutors for their program and lessons, and giving me the opportunity to navigate and learn by myself by coding this webpage.
+- I want to thank Code Institute and their tutors for their program and lessons, and giving me the opportunity to navigate and learn by myself by coding this webpage and game.
 - I want to thank the Slack community and my mentor Dick Vlaanderen for feedback and inputs.
