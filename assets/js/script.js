@@ -1,3 +1,9 @@
+// Creates new h2 element with id attribute and appends it
+const createGameWinnerHeader = document.createElement("h2");
+createGameWinnerHeader.setAttribute("id", "game-winner");
+const roundCounter = document.getElementById("round-counter");
+roundCounter.appendChild(createGameWinnerHeader);
+
 /*
 Declare variables for DOM elements
 And available options
@@ -18,6 +24,9 @@ const gameWinner = document.getElementById("game-winner");
 const options = ["rock", "paper", "scissors", "lizard", "spock"];
 const colors = ["lightgrey", "lightcoral", "lightblue", "lightgreen", "lightgoldenrodyellow"];
 const colorsText = ["Grey", "Red", "Blue", "Green", "Yellow"];
+
+// Adds linebreak for header with game-winner id
+gameWinner.innerHTML = "<br>";
 
 // Allows player to select color
 colorChoice.addEventListener("change", function () {
