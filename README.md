@@ -20,12 +20,12 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
 ![Header](documentation/header.jpg)
 
-- **Player Customization**
+- **Colour Customization**
 
-  - Featured right below the header. The user is allowed to customize the colour of their 'player character' from a predetermined colour set in the form of a drop-down list.
-  - The chosen colour of the user will appear in their player-box, above their name and also change the box to the chosen colour.
-  - Upon user selection of their colour, the computer will also choose its own colour, and change the colour of its box to its chosen colour.
-  - The computer will never choose the same colour as the player currently uses. This is to prevent confusion and keeping an easy visual distinction between each player.
+  - Featured right below the header. The user is allowed to customize the colour of their 'player character/box' from a predetermined colour set in the form of a drop-down list. This gives the user freedom by having more control of how they want their game to look (being able to style their user's box).
+  - The chosen colour of the user will appear both as text in their user's box above the 'player' line, and also change the box to the chosen colour. This is to improve UX: would the user for example be colour blind, they still know their box is 'Grey'.
+  - Upon user selection of their colour, the computer will also choose its own colour in similar fashion, and change the colour of its box to its chosen colour. This makes the game feel more 'alive and responsive' in that the computer also picks its colour and this adds an element of unpredictability (what colour will the user be facing?).
+  - The computer will never choose the same colour as the user currently uses. This is to prevent confusion and keeping an easy visual distinction between each player.
   - The customized colour choices are locally stored in the browser. Keeping the user's and computer's preferred colour if the page is refreshed or if the user close it and would decide to come back.
 
 ![Colour Customization](documentation/colour-customization.jpg)
@@ -33,7 +33,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 - **Game Options**
 
   - The user is presented with 5 clickable options in the game: Rock, Paper, Scissors, Lizard or Spock. Each of these clickable buttons contain a text presenting their choice and also contain a corresponding icon for better style and easier visualisation of each choice.
-  - When a button is clicked. The buttons will be locked until the computer has made its own move against the player. This makes it more user friendly to the player as it will prevent clicking two buttons or more in succession by mistake.
+  - When a button is clicked. The buttons will be locked until the computer has made its own move against the player. This makes it more user friendly to the player as it will also prevent clicking two buttons or more in rapid succession by mistake.
 
 ![Game Options](documentation/game-options.jpg)
 
@@ -43,9 +43,9 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - The user's box on the left side will change image when the user clicks on one of the game buttons. It will change to an appropriate picture presenting the player's choice.
   - The computer's image will turn blank with a delay to portray a more human behaviour. Conveying a feeling that it is 'thinking about its next move'.
   - The computer's JavaScript coding will make a completely random choice between Rock, Paper, Scissors, Lizard or Spock. It will change its image to its choice and then the game will decide who the winner is of the round.
-  - When the round's winner is decided (or if it's a tie) the round will increase by 1, and if there is a winner they will be awarded 1 point more to their score.
+  - When the round's winner is decided (or if it's a tie) the round will increase by 1, and if there is a winner they will be awarded 1 point more to their score (with a maximum possible score of 5).
   - At the end of round 5, a description of the game's result will be displayed between the game buttons and game profiles: revealing the winner of the game (or if it's a tie).
-  - After round 5, the game will immediately restart if the player clicks on any game button. The game will also immediately begin through round 1, sending the player and computer straight into the game and deciding who the winner is of round 1.
+  - After round 5, the game will immediately restart if the player clicks on any game button. The game will also immediately begin through round 1, sending the player and computer straight into the game and deciding who the winner is of round 1. This is to make the game extra simple, avoiding unnecessary extra functions. It's just play the game and see the results since the user will be here to learn the rules of RPSLS so that they later can teach and play the game with others.
 
 ![Game Results Start](documentation/game-results-start.jpg)
 ![Game Results](documentation/game-results.jpg)
@@ -124,14 +124,14 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
   - The presented colour names in the game are not the actual semantic colours in the game.
     - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
-    - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
+    - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images with these backgrounds easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
 
   - Footer has inverted colours. Its background is black while the text is white.
     - **Reasons**: Better UX. To make the rules clearly separated from the rest of the document.
 
 - **Style**
 
-  - All 5 options that are playable in the game: all 5 are represented by both literal text and an illustration or icon.
+  - All 5 options that are playable in the game are represented by both literal text and an illustration or icon.
   - **Reasons**: Consistency. Clearly associating what (image)/(hand gesture) are associated with what literal choice. Making the game easier to read and learn.
 
 ## Testing
@@ -145,16 +145,16 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 - HTML
   - No errors were found but 1 warning was returned on the html page when passing through the html validator: <https://validator.w3.org/>
     - Empty heading warning on line 67.
-    - **Reasons**: JavaScript will add text into this header of the game's result. It begins as empty, and when the game restarts it turns back into this same state.
-  - Info messages are coming from an automatic formating in the index.html upon saving changes while using the Codeanywhere IDE and the Code Institute template. It is not the programmer's intention to include these.
-    - **Reasons**: Current lack of understanding of how to turn off or fix this type of formatting without manually fixing '28 typos' every time a change is made to the index.html.
+    - **Reasons**: JavaScript will add text into this header about the game's result. It begins as empty, and when the game restarts it turns back into this same empty state.
+  - Info messages are coming from an automatic formatting in the index.html upon saving changes while using the Codeanywhere IDE and the Code Institute template. It is not the programmer's intention to include these.
+    - **Reasons**: Current lack of understanding of how to turn off or fix this type of formatting without manually fixing '29 typos' every time a change is made to the index.html.
 
 - CSS
   - No errors were found when passing through the css validator: <https://jigsaw.w3.org/css-validator/>
 
 - JavaScript
-  - No errors were found but 1 warning was returned when passing through the jshint validator <https://jshint.com/>
-    - Function declared within loop referencing outer scoped variable.
+  - No errors were found but 1 warning was returned when passing through the JSHint validator <https://jshint.com/>
+    - Function declared within loop referencing outer scoped variable may lead to confusing semantics.
     - **Reasons**: Current lack of knowledge of how to circumvent this type of warning.
 
 - HTML validator results for index.html, about.html, contact.html and confirmation.html
