@@ -104,6 +104,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
 - Addition so the player can meet another player instead of computer. Switch out computer on the right part to become a second player. Give keyboard controls to the game.
   - Example: controls w+a (rock), w+s (paper), w+d (scissors), s+a (lizard), s+d (spock) is left player. Same combo but for arrows are for right player: Arrow-up+arrow-left (rock), arrow-up+arrow-down (rock), arrow-up+arrow-right (scissors), arrow-down+arrow-left (lizard), arrow-down+arrow-rigth (spock).
+  - **Reasons**: Lack of time.
 
 ## Design
 
@@ -143,14 +144,12 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 ### Validator Testing
 
 - HTML
-  - No errors were found but 1 warning was returned on the html page when passing through the html validator: <https://validator.w3.org/>
-    - Empty heading warning on line 67.
-    - **Reasons**: JavaScript will add text into this header about the game's result. It begins as empty, and when the game restarts it turns back into this same empty state.
+  - No errors or warnings were found when passing through the html validator: <https://validator.w3.org/>
   - Info messages are coming from an automatic formatting in the index.html upon saving changes while using the Codeanywhere IDE and the Code Institute template. It is not the programmer's intention to include these.
-    - **Reasons**: Current lack of understanding of how to turn off or fix this type of formatting without manually fixing '29 typos' every time a change is made to the index.html.
+    - **Reasons**: Current lack of understanding of how to turn off or fix this type of formatting without manually fixing '28 typos' every time a change is made to the index.html.
 
 - CSS
-  - No errors were found when passing through the css validator: <https://jigsaw.w3.org/css-validator/>
+  - No errors or warnings were found when passing through the css validator: <https://jigsaw.w3.org/css-validator/>
 
 - JavaScript
   - No errors were found but 1 warning was returned when passing through the JSHint validator <https://jshint.com/>
