@@ -45,7 +45,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - The computer's JavaScript coding will make a completely random choice between Rock, Paper, Scissors, Lizard or Spock. It will change its image to its choice and then the game will decide who the winner is of the round.
   - When the round's winner is decided (or if it's a tie) the round will increase by 1, and if there is a winner they will be awarded 1 point more to their score (with a maximum possible score of 5).
   - At the end of round 5, a description of the game's result will be displayed between the game buttons and game profiles: revealing the winner of the game (or if it's a tie).
-  - After round 5, the game will immediately restart if the player clicks on any game button. The game will also immediately begin through round 1, sending the player and computer straight into the game and deciding who the winner is of round 1. This is to make the game extra simple, avoiding unnecessary extra functions. It's just play the game and see the results since the user will be here to learn the rules of RPSLS so that they later can teach and play the game with others.
+  - After round 5, the game will immediately restart if the player clicks on any game button. The game will also immediately begin through round 1, sending the player and computer straight into the game and deciding who the winner is of round 1. This is to make the game extra simple, avoiding unnecessary extra functions. It's just to play the game and see the results since the user will be here to learn the rules of RPSLS so that they can later teach and play the game with others.
 
 ![Game Results Start](documentation/game-results-start.jpg)
 ![Game Results](documentation/game-results.jpg)
@@ -86,7 +86,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
   - **Reasons**: Lack of time.
 
 - Worst enemy. The player will have a 'Worst Enemy' which will be the coloured computer they have lost the most times against. Based on at least 3 games.
-  - Example: In 7 games. The player has won 2 times against Blue Computer, lost 1 against Green Computer, won 1 against Yellow Computer, lost 4 times against Yellow Computer.
+  - Example: In 8 games. The player has won 2 times against Blue Computer, lost 1 against Green Computer, won 1 against Yellow Computer, lost 4 times against Yellow Computer.
   - Worst Enemy: Yellow Computer (since the player has lost 4/5 games against Yellow Computer, and it is more total played games than 1/1 against Green Computer)
   - **Reasons**: Lack of time.
   
@@ -119,7 +119,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
     - 'You won!' div does not have a border or styling as could be suggested by the wireframe.
     - Buttons have consistent spacing between each other. They don't change based on screen media.
-      - **Reasons**: Didn't feel iike they were necessary. Keeping it simple. Better design.
+      - **Reasons**: Didn't feel like they were necessary. Keeping it simple. Better design.
 
 - **Colours**
 
@@ -156,7 +156,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
     - Function declared within loop referencing outer scoped variable may lead to confusing semantics.
     - **Reasons**: Current lack of knowledge of how to circumvent this type of warning.
 
-- HTML validator results for index.html, about.html, contact.html and confirmation.html
+- HTML validator result for index.html
 
   ![HTML validation](documentation/validate-html.jpg)
 
