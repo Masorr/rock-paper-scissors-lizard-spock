@@ -125,7 +125,7 @@ Users of this game will learn the rules of RPSLS, and is targeted towards adults
 
   - The presented colour names in the game are not the actual semantic colours in the game.
     - "Red" for example is actually "lightcoral" and "Yellow" is actually "lightgoldenrodyellow".
-    - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images with these backgrounds easier to read visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
+    - **Reasons**: Better UX. These colours are lighter in nature, making the texts and images with these backgrounds easier to read and visualize. The actual names of the colours are somewhat unfriendly, so they were changed to more appropriate names when presented for the user.
 
   - Footer has inverted colours. Its background is black while the text is white.
     - **Reasons**: Better UX. To make the rules clearly separated from the rest of the document.
